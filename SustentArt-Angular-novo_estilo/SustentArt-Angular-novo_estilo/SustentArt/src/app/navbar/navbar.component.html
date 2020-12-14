@@ -1,0 +1,50 @@
+<!--NAVBAR-->
+
+<nav class="navbar navbar-light  py-2 d-flex align-items-center bgNave sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="../assets/logoSustentart.png" width="35" height="35" class="d-inline-block align-top" alt="">
+    SustentArt
+  </a>
+
+  <div *ngIf="authService.btnSair() ">
+    
+    <a class="navbar-brand sublinharTexto" routerLink="/home">Home</a>
+    <a class="navbar-brand sublinharTexto" routerLink="/feed">Feed</a>
+    <!-- <a class="navbar-brand" routerLink="/perfil">Perfil</a>  -->
+    <a class="navbar-brand sublinharTexto" routerLink="/post-tema" *ngIf='authService.adm()'>Tema</a>
+  </div>
+
+  <div class="form-inline" *ngIf='authService.btnLogin()'>
+
+    <!-- Campo Login -->
+
+    <label class="sr-only" for="email">E-Mail</label>
+    <div class="input-group mr-2">
+      <input type="text" class="form-control" id="email" [(ngModel)]="userLogin.email" placeholder="E-Mail">
+    </div>
+
+    <label class="sr-only" for="senha">Nome</label>
+    <input type="password" class="form-control mr-2" id="senha" placeholder="Senha" [(ngModel)]="userLogin.senha">
+
+    <button class="btn btn-success" type="submit" (click)='entrar()'>Login</button>
+
+  </div>
+  <!-- Campo Login -->
+
+  <!-- Saudação Usuario -->
+  <h5 *ngIf="authService.btnSair()" class="ml-auto"> Bem-vinde, {{authService.nomeUser()}}</h5>
+  <!-- /Saudação Usuario -->
+
+  <!--Botão SAIR-->
+  <div *ngIf='authService.btnSair()'>    
+    <ul>
+      <li>
+        <button class="btn btn-outline-success mt-2" (click)='sair()'>Sair</button>
+      </li>
+    </ul>     
+  </div>
+  <!--/Botão SAIR-->
+
+
+</nav>
+<!--/NAVBAR-->

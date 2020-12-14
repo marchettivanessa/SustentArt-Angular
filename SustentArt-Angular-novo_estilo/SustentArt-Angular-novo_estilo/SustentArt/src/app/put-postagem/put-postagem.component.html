@@ -1,0 +1,50 @@
+<div class="container">
+
+  <div>
+    <div class="form-group mt-5">
+      <label for="titulo">Titulo da postagem</label>
+      <input type="text" class="form-control" id="titulo" aria-describedby="emailHelp"
+        placeholder="Digite aqui o seu titulo" [(ngModel)]="postagem.titulo">
+    </div>
+    <div class="form-group">
+      <label for="data">Data:</label>
+      <input type="date" class="form-control" id="data" placeholder="Ex: dd/mm/aaaa" [(ngModel)]='postagem.data'>
+    </div>
+    <div class="form-group">
+      <label for="regiao">Região:</label>
+      <input type="text" class="form-control" id="regiao" placeholder="Digite a sua região..."
+        [(ngModel)]='postagem.regiao'>
+    </div>
+    <div class="form-group">
+      <label for="imagem">Imagem:</label>
+      <input type="text" class="form-control" id="imagem" placeholder="http://imagem.com" [(ngModel)]='postagem.imagem'>
+    </div>
+
+    <div class="form-group">
+      <label for="material">Material:</label>
+      <input type="text" class="form-control" id="material" placeholder="Digite aqui o tipo de material"
+        [(ngModel)]='postagem.material'>
+    </div>
+
+    <div class="form-group">
+      <label for="descricao">Texto da postagem</label>
+      <textarea class="form-control" id="descricao" rows="3" placeholder="Descreva sua postagem aqui.."
+        [(ngModel)]="postagem.descricao"></textarea>
+    </div>
+
+    <div class="form-group m-0">
+      <label class="text-monospace" for="tema"> Escolha um tema </label>
+      <select name="tema" id='tema' [(ngModel)]="idTema" (change)="findByIdTema()" class="form-control">
+        <option *ngFor="let item of listaTemas" value={{item.id}}>
+          {{item.conteudo}}
+        </option>
+      </select>
+    </div>
+
+    <div class="d-flex justify-content-end mb-5 mt-5">
+        <a class="btn btn-success mr-3 faShareSquare" title="Salvar" (click)='salvar()'>Salvar  
+        <fa-icon [icon]="faShareSquare" class="faShareSquare"></fa-icon></a>
+    </div>
+  </div> 
+
+</div>

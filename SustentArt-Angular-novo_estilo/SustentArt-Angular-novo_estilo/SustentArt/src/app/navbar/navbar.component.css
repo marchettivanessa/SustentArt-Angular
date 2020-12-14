@@ -1,0 +1,14 @@
+ul li {
+    list-style: none;
+}
+
+.bgNave
+{
+    background-color: #caebf2;
+}
+
+.sublinharTexto:hover
+{
+    text-decoration: underline;    
+    font-weight: 780;    
+}

@@ -1,0 +1,44 @@
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+  
+    padding: 0;
+  }
+  
+  ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+  }
+  
+  .faFacebook, .faGithub, .faInstagram{
+      color: white;
+  }
+  
+  .faFacebook:hover{
+    color: #3b5998;
+  }
+  
+  .faGithub:hover{
+  color: #0072b1;
+  }
+  
+  .faInstagram:hover{
+  color: #C13584;
+  }
+
+  .bg-cl{
+    background-color: #025159;
+  }
+
+  .bg-cl2{
+    background-color: #025159;
+  }
+
+  ul{
+    
+    list-style-type: none;
+  }
+
+  

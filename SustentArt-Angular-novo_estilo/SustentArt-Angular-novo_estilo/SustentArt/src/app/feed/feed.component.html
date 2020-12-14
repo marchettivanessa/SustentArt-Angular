@@ -1,0 +1,396 @@
+<div class="container mb-5">
+
+
+  <!-- Componente Carousel Feed -->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade mt-5" data-ride="carousel">
+
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="card-columns text-center">
+
+            <div class="card text-center border border-success">
+              <img class="card-img-top" src="assets/Carousel Feed/2.jpeg" alt="Imagem floresta">
+              <div class="card-primary">
+                <p class="card-text"><small class="text-muted">Ajude a preservar nossas florestas!
+                  </small>
+                </p>
+              </div>
+            </div>
+
+            <div class="card text-center border border-warning">
+              <div class="card-primary">
+                <img class="card-img-top" src="assets/Carousel Feed/1.jpeg" alt="Imagem de carrafa amassada">
+                <p class="card-text"><small class="text-muted mb-2">Reinvente os propósitos.</small>
+                </p>
+              </div>
+            </div>
+
+            <div class="card text-center border border-success">
+              <div class="card-primary">
+                <img class="card-img-top" src="assets/Carousel Feed/3.jpeg" alt="Imagem de floresta com rio">
+                <p class="card-text"><small class="text-muted"> Suas ações podem manter limpo nossos rios. </small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagina 2 do Carousel -->
+      <div class="carousel-item">
+        <div class="container">
+          <div class="card-columns text-center">
+
+            <div class="card text-center  border border-secondary">
+              <img class="card-img-top" src="assets/Carousel Feed/4.jpeg" alt="Alternativa de Reciclagem">
+              <p class="card-text"><small class="text-muted mb-2">Existe sustentabilidade quando se repensa o
+                  consumo.</small>
+            </div>
+
+            <div class="card text-center  border border-success">
+              <div class="card-img-top">
+                <img class="card-img" src="assets/Carousel Feed/5.jpeg">
+                <p class="card-text"><small class="text-muted mb-2">Moda e sustentabilidade devem andar juntos!</small>
+                </p>
+              </div>
+            </div>
+
+            <div class="card text-center  border border-secondary">
+              <div class="card-img-top">
+                <img class="card-img" src="assets/Carousel Feed/6.jpeg" alt="Alternativa de Reciclagem">
+                <p class="card-text"><small class="text-muted mb-2">Produção de arte sustentável.</small> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
+  <!-- /Componente Carousel Feed -->
+
+
+  <div class="justify-content-center mt-3 mb-0">
+
+    <hr>
+
+    <!-- Jumbotron Postagem -->
+    <div class="jumbotron w-100 m-0">
+      <div class="row ">
+        <div class="col-md-6">
+          <h1 class="display-4 n"> Olá, 😊 <br> o que você procura!? </h1>
+          <hr>
+          <p class="lead n2 justify-content-center">Compartilhe materiais, projetos, conhecimentos e ideias!</p>
+
+          <div class="form-inline  mt-3 mb-3">
+            <button class="btn btn-success btn-lg" type="button" data-toggle="modal"
+              data-target="#cadastro">Compartilhar</button>
+          </div>
+
+        </div>
+
+        <!-- Imagem Jumbotron -->
+        <div class="col-md-6">
+          <div class="d-flex justify-content-center ">
+            <img class="border border-primary rounded d-flex justify-content-center" src="../assets/img_postagem.png"
+              alt="Imagem de Perfil" style="width:300px">
+
+          </div>
+          <!-- /Imagem Jumbotron -->
+        </div>
+      </div>
+    </div>
+    <!-- /Jumbotron Postagem -->
+
+
+    <!-- Modal Cadastro Postagem -->
+    <div class="modal fade" id="cadastro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+
+          <!-- Jumbotron -->
+          <div class="justify-content-center m-5">
+
+            <div class="d-flex justify-content-center ">
+              <img class="border border-primary rounded d-flex justify-content-center" src="../assets/img_post.png"
+                alt="Imagem de Perfil" style="width:180px">
+
+            </div>
+            <!-- /Jumbotron -->
+
+
+            <!-- Campo cadastrar Postagem -->
+            <div class="form-group">
+              <label for="titulo">Título:</label>
+              <input type="text" class="form-control" id="titulo" placeholder="Digite aqui o seu titulo"
+                [(ngModel)]='postagem.titulo'>
+            </div>
+
+            <div class="form-group">
+              <label for="data">Data:</label>
+              <input type="date" class="form-control" id="data" placeholder="Ex: dd/mm/aaaa"
+                [(ngModel)]='postagem.data'>
+            </div>
+
+            <div class="form-group">
+              <label for="regiao">Região:</label>
+              <input type="text" class="form-control" id="regiao" placeholder="Digite a sua região..."
+                [(ngModel)]='postagem.regiao'>
+            </div>
+
+            <div class="form-group">
+              <label for="imagem">Imagem:</label>
+              <input type="text" class="form-control" id="imagem" placeholder="http://imagem.com"
+                [(ngModel)]='postagem.imagem'>
+            </div>
+
+            <div class="form-group">
+              <label for="material">Material:</label>
+              <input type="text" class="form-control" id="material" placeholder="Digite aqui o tipo de material"
+                [(ngModel)]='postagem.material'>
+            </div>
+
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+              <textarea class="form-control" id="descricao" rows="3" placeholder="Descreva sua postagem aqui..."
+                [(ngModel)]='postagem.descricao'></textarea>
+            </div>
+
+            <div class="col-md-6">
+              <div class="form-group m-0">
+                <label for="tema">Escolha um tema </label>
+
+                <select name="tema" id='tema' class="form-control" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option *ngFor='let item of listaTemas' value={{item.id}}>
+                    {{item.conteudo}}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="row d-flex align-items-end">
+
+              <hr>
+              <!-- /Campo cadastrar Postagem -->
+
+              <div class="modal-footer">
+                <!-- Botão Publicar -->
+                <button type="button" class="btn btn-success" (click)='publicar()'
+                  data-dismiss="modal">Publicar</button>
+                <!-- /Botão Publicar -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Cadastro Postagem-->
+
+    <!-- Campo Busca -->
+    <nav class="d-flex justify-content-center mb-3 mt-5">
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+        <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
+          href="#minhas-postagens" role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
+
+        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab" data-toggle="tab"
+          href="#postagens-temas" role="tab" aria-controls="nav-profile" aria-selected="false">Postagens por
+          Tema</a>
+
+        <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-regiao-tab" data-toggle="tab"
+          href="#postagens-regiao" role="tab" aria-controls="nav-profile" aria-selected="true">Postagens por
+          Região</a>
+      </div>
+    </nav>
+
+    <!-- /Campo Busca -->
+
+    <!-- Busca por Postagem -->
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel" arial-labelledby="nav-postagens-tab">
+
+        <div class="row">
+
+          <div class="col-md-10 pr-0">
+            <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar"
+              [(ngModel)]='titulo'>
+
+          </div>
+
+          <div class="col-md-2 pl-0">
+            <a class="btn btn-success w-100 ml-2 faSearch" title="Pesquisar" (click)='findByTituloPostagem()'>
+              <fa-icon [icon]="faSearch" class="faSearch"></fa-icon> Pesquisar
+            </a>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+
+            <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy: key : reverse'>
+              <div class="card-header">
+
+                <!-- Imagem da postagem  -->
+                <div class="row">
+
+                  <div class=" col-sm-4 rounded d-flex ">
+                    <img class="border border-success rounded img-fluid" src="{{item.imagem}}" alt="Imagem de Perfil"
+                      style="width:300px">
+                  </div>
+
+                  <div class="col-md-0 mb-0 ml-0 mr-0 mt-0 ">
+                    <h5 class="card-title">{{item.titulo}}</h5>
+                    <small>Tema: {{item.tema.conteudo}} </small>
+
+                    <hr>
+
+                    <!-- Botões Tema Editar / Apagar -->
+
+                    <a [routerLink]="['/edita-post',item.id]" class="btn btn-outline-info mr-3 faEdit" title="Editar" *ngIf='authService.adm()'>
+                      <fa-icon [icon]="faEdit" class="faEdit"></fa-icon>
+                    </a>
+
+                    <a [routerLink]="['/delete-post',item.id]" class="btn btn-outline-danger mr-3 faTrashAlt"
+                      title="Apagar" *ngIf='authService.adm()'>
+                      <fa-icon [icon]="faTrashAlt" class="faTrashAlt"></fa-icon>
+                    </a>
+                    <!-- /Botões Tema Editar / Apagar -->
+
+                  </div>
+                </div>
+                <!-- /Imagem da postagem  -->
+
+              </div>
+              <div class="card-body">
+                <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
+                <hr>
+                <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
+                  {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} / {{item.regiao}}
+                </small>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Busca por Postagem -->
+
+      <!-- Busca por tema -->
+      <div class="tab-pane fade" id="postagens-temas" role="tabpanel" aria-labelledby="nav-presenca-tab">
+        <div class="row">
+          <div class="col-md-10 pr-0">
+            <input class="form-control w-100" type="search" placeholder="Pesquisar temas" aria-label="Pesquisar"
+              [(ngModel)]='conteudo'>
+
+          </div>
+          <div class="col-md-2 pl-0">
+            <a class="btn btn-success w-100 ml-2 faSearch" title="Pesquisar" (click)='findByNomeTema()'>
+              <fa-icon [icon]="faSearch" class="faSearch"></fa-icon> Pesquisar
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" *ngFor='let item of listaTemas | orderBy: key : reverse'>
+            <div *ngFor='let post of item.postagem'>
+              <div class="card mt-5">
+                <div class="card-header">
+                  <div class="row d-flex align-items-center">
+                    <div class="col-md-8">
+                      <h5 class="card-title">{{post.titulo}}</h5>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+
+                      <a [routerLink]="['/edita-post',item.id]" class="mr-3 btn btn-outline-info faEdit" title="Editar"
+                        *ngIf='auth.adm()'>
+                        <fa-icon [icon]="faEdit" class="faEdit"></fa-icon>
+                      </a>
+
+                      <a [routerLink]="['/delete-post',item.id]" class="btn btn-outline-danger mr-3 faTrashAlt"
+                        title="Apagar" *ngIf='auth.adm()'>
+                        <fa-icon [icon]="faTrashAlt" class="faTrashAlt"></fa-icon>
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <p class="card-text" aria-describedby="texto">{{post.descricao}}</p>
+                  <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
+                    {{post.data | date: 'dd/MM/yyyy'}} às {{post.data | date: 'HH:mm'}} / {{post.regiao}}
+                  </small>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /buscar por tema -->
+
+      <!--Busca por Regiao-->
+      <div class="tab-pane fade" id="postagens-regiao" role="tabpanel" aria-labelledby="nav-presenca-tab">
+        <div class="row">
+          <div class="col-md-10 pr-0">
+            <input class="form-control w-100" type="search" placeholder="Pesquisar regiao" aria-label="Pesquisar"
+              [(ngModel)]='regiao'>
+
+          </div>
+          
+          <div class="col-md-2 pl-0">
+            <a class="btn btn-success w-100 ml-2 faSearch" title="Pesquisar" (click)='findByRegiaoPostagem()'>
+              <fa-icon [icon]="faSearch" class="faSearch"></fa-icon> Pesquisar
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12" *ngFor='let item of listaPostagens | orderBy: key : reverse'>
+            <div class="card mt-5">
+              <div class="card-header">
+                <div class="row d-flex align-items-center">
+                  <div class="col-md-8">
+                    <h5 class="card-title">{{item.titulo}}</h5>
+                  </div>
+
+                  <div class="col-md-4 d-flex justify-content-end">
+
+                    <a [routerLink]="['/edita-post',item.id]" class="mr-3 btn btn-outline-info faEdit" title="Editar"
+                      *ngIf='auth.adm()'>
+                      <fa-icon [icon]="faEdit" class="faEdit"></fa-icon>
+                    </a>
+
+                    <a [routerLink]="['/delete-post',item.id]" class="btn btn-outline-danger mr-3 faTrashAlt"
+                      title="Apagar" *ngIf='auth.adm()'>
+                      <fa-icon [icon]="faTrashAlt" class="faTrashAlt"></fa-icon>
+                    </a>
+
+                  </div>
+                </div>
+              </div>
+              <div class="card-body ">
+                <p class="card-text" aria-describedby="texto">{{item.descricao}}</p>
+                <small id="texto" class="form-text m-0 text-muted mb- text-monospace">Postado em:
+                  {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} / {{item.regiao}}
+                </small>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Busca por Região -->
+    </div>
+  </div>
+</div>
